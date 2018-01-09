@@ -1,13 +1,11 @@
-package model;
-
-public class Beasiswa {
+public class ModelBeasiswa {
     private int id;
     private String beasiswaName;
     private double totalBiaya;
 
-    public Beasiswa(){}
+    public ModelBeasiswa(){}
 
-    public Beasiswa(int id, String beasiswaName, double totalBiaya) {
+    public ModelBeasiswa(int id, String beasiswaName, double totalBiaya) {
         this.id = id;
         this.beasiswaName = beasiswaName;
         this.totalBiaya = totalBiaya;

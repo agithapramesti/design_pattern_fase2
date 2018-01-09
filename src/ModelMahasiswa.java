@@ -1,13 +1,11 @@
-package model;
-
-public class Mahasiswa {
+public class ModelMahasiswa {
     private int idMahasiswa, semester;
     private String namaMahasiswa, statusBeasiswa, statusMahasiswa, jurusan;
     private float ipk;
 
-    public Mahasiswa(){}
+    public ModelMahasiswa(){}
 
-    public Mahasiswa(int idMahasiswa, int semester, String namaMahasiswa, String statusBeasiswa, String statusMahasiswa, String jurusan, float ipk) {
+    public ModelMahasiswa(int idMahasiswa, int semester, String namaMahasiswa, String statusBeasiswa, String statusMahasiswa, String jurusan, float ipk) {
         this.idMahasiswa = idMahasiswa;
         this.semester = semester;
         this.namaMahasiswa = namaMahasiswa;

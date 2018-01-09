@@ -1,12 +1,10 @@
-package model;
-
-public class Pewawancara {
+public class ModelPewawancara {
     private int idPewawancara;
     private String namaPewawancara, role;
 
-    public Pewawancara(){}
+    public ModelPewawancara(){}
 
-    public Pewawancara(int idPewawancara, String namaPewawancara, String role) {
+    public ModelPewawancara(int idPewawancara, String namaPewawancara, String role) {
         this.idPewawancara = idPewawancara;
         this.namaPewawancara = namaPewawancara;
         this.role = role;
