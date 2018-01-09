@@ -5,6 +5,6 @@ public class Unsubscribe extends Observer{
     }
     @Override
     public void update(){
-        System.out.println(" anda unsubscribe.. ");
+        System.out.println("Okay, anda unsubscribe.. ");
     }
 }

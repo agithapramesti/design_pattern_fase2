@@ -8,7 +8,7 @@ public class Main {
         new Subscribe(mahasiswa);
         new Unsubscribe(mahasiswa2);
         mahasiswa.setStatusMahasiswa(mahasiswa.getStatusMahasiswa());
-        mahasiswa.setStatusMahasiswa(mahasiswa2.getStatusMahasiswa());
+        mahasiswa2.setStatusMahasiswa(mahasiswa2.getStatusMahasiswa());
 
         BeasiswaFactory beasiswaFactory= new BeasiswaFactory();
         Beasiswaa beasiswaa1= beasiswaFactory.getBeasiswa("bidikmisi");
