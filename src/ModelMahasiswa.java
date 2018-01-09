@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class ModelMahasiswa {
     private int idMahasiswa, semester;
     private String namaMahasiswa, statusBeasiswa, statusMahasiswa, jurusan;
     private float ipk;
-
+    private List<Observer> observers= new ArrayList<>();
     public ModelMahasiswa(){}
+// status beasiswa buat yg memento
+// status mahasiswa buat yg observer
 
     public ModelMahasiswa(int idMahasiswa, int semester, String namaMahasiswa, String statusBeasiswa, String statusMahasiswa, String jurusan, float ipk) {
         this.idMahasiswa = idMahasiswa;
@@ -38,21 +43,32 @@ public class ModelMahasiswa {
     public void setNamaMahasiswa(String namaMahasiswa) {
         this.namaMahasiswa = namaMahasiswa;
     }
-
+    // status mahasiswa buat yg observer
     public String getStatusBeasiswa() {
         return statusBeasiswa;
     }
 
     public void setStatusBeasiswa(String statusBeasiswa) {
-        this.statusBeasiswa = statusBeasiswa;
-    }
 
+        this.statusBeasiswa = statusBeasiswa;
+
+    }
+    public void attach(Observer observer){
+        observers.add(observer);
+    }
+    public void notifyAllObservers(){
+        for (Observer observer : observers) {
+            observer.update();
+        }
+    }
     public String getStatusMahasiswa() {
         return statusMahasiswa;
     }
 
     public void setStatusMahasiswa(String statusMahasiswa) {
+
         this.statusMahasiswa = statusMahasiswa;
+        notifyAllObservers();
     }
 
     public String getJurusan() {

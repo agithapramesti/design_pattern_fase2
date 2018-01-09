@@ -8,7 +8,13 @@ public class SetahunBeasiswaDecorator extends DecoratorBeasiswa{
         beasiswa.getBeasiswaName();
         setWaktu();
     }
-//  method waktu berbeda
+
+    @Override
+    public void draw() {
+
+    }
+
+    //  method waktu berbeda
     private void setWaktu(){
         System.out.println("Durasi : 1 tahun");
     }

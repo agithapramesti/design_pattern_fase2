@@ -9,4 +9,9 @@ public class ImpBeasiswa implements InterfaceBeasiswa{
     public void getTotalBiaya() {
         System.out.println("Rp 700.000");
     }
+
+    @Override
+    public void draw() {
+
+    }
 }
