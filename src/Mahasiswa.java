@@ -1,4 +1,4 @@
-package model;
+
 
 public class Mahasiswa {
     private int idMahasiswa, semester;
@@ -71,5 +71,13 @@ public class Mahasiswa {
 
     public void setIpk(float ipk) {
         this.ipk = ipk;
+    }
+
+    public Memento saveStateToMemento(){
+        return new Memento(statusBeasiswa);
+    }
+
+    public void getStateFromMemento(Memento memento){
+        statusBeasiswa = memento.getState();
     }
 }
