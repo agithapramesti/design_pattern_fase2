@@ -1,8 +1,8 @@
-public class ImpBeasiswaBidikmisi implements InterfaceBeasiswa{
+public class ImpBeasiswa implements InterfaceBeasiswa{
 
     @Override
     public void getBeasiswaName() {
-        System.out.println("Weli Barat");
+        System.out.println("Andika Kangenben");
     }
 
     @Override

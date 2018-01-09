@@ -6,10 +6,10 @@ public class SetahunBeasiswaDecorator extends DecoratorBeasiswa{
     @Override
     public void getBeasiswaName() {
         beasiswa.getBeasiswaName();
-        setWaktu(beasiswa);
+        setWaktu();
     }
-
-    private void setWaktu(InterfaceBeasiswa beasiswa){
+//  method waktu berbeda
+    private void setWaktu(){
         System.out.println("Durasi : 1 tahun");
     }
 }
