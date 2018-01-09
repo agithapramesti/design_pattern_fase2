@@ -6,6 +6,7 @@ public class Subscribe extends Observer {
     }
     @Override
     public void update(){
-        System.out.println("Yeay! anda mensubscribe.. ");
+
+        System.out.println("Hey "+mahasiswa.getNamaMahasiswa()+" anda berhasil Subscribe!");
     }
 }

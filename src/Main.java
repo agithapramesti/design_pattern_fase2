@@ -4,7 +4,7 @@ public class Main {
 
 
         Mahasiswa mahasiswa= new Mahasiswa(1,3,"gege","diterima","subscribe","TI",3);
-        Mahasiswa mahasiswa2= new Mahasiswa(1,3,"gege","diterima","unsubscribe","TI",3);
+        Mahasiswa mahasiswa2= new Mahasiswa(2,3,"nadya","diterima","unsubscribe","TI",3);
         new Subscribe(mahasiswa);
         new Unsubscribe(mahasiswa2);
         mahasiswa.setStatusMahasiswa(mahasiswa.getStatusMahasiswa());
