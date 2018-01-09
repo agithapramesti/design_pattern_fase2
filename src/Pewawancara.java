@@ -1,15 +1,14 @@
-package model;
-
 public class Pewawancara {
     private int idPewawancara;
-    private String namaPewawancara, role;
+    private String namaPewawancara;
+    private String pertanyaan;
 
     public Pewawancara(){}
 
-    public Pewawancara(int idPewawancara, String namaPewawancara, String role) {
+    public Pewawancara(int idPewawancara, String namaPewawancara, String role, String pertanyaan) {
         this.idPewawancara = idPewawancara;
         this.namaPewawancara = namaPewawancara;
-        this.role = role;
+        this.pertanyaan = pertanyaan;
     }
 
     public int getIdPewawancara() {
@@ -28,11 +27,7 @@ public class Pewawancara {
         this.namaPewawancara = namaPewawancara;
     }
 
-    public String getRole() {
-        return role;
-    }
-
-    public void setRole(String role) {
-        this.role = role;
+    public void menanyakanPertanyaan() {
+        System.out.println(this.namaPewawancara + " menanyakan tentang " + this.pertanyaan);
     }
 }

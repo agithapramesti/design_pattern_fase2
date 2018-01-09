@@ -1,20 +1,25 @@
-package model;
+import java.util.ArrayList;
+import java.util.Observer;
+import java.util.Random;
 
-public class Mahasiswa {
+public class Mahasiswa implements Observer{
     private int idMahasiswa, semester;
     private String namaMahasiswa, statusBeasiswa, statusMahasiswa, jurusan;
     private float ipk;
+    private Beasiswa beasiswaPilihan;
+    private Random randomGenerator;
 
     public Mahasiswa(){}
 
-    public Mahasiswa(int idMahasiswa, int semester, String namaMahasiswa, String statusBeasiswa, String statusMahasiswa, String jurusan, float ipk) {
+    public Mahasiswa(int idMahasiswa, int semester, String namaMahasiswa, String jurusan, float ipk) {
         this.idMahasiswa = idMahasiswa;
         this.semester = semester;
         this.namaMahasiswa = namaMahasiswa;
-        this.statusBeasiswa = statusBeasiswa;
-        this.statusMahasiswa = statusMahasiswa;
+        this.statusBeasiswa = "belum terdaftar";
+        this.statusMahasiswa = "unsubscribe";
         this.jurusan = jurusan;
         this.ipk = ipk;
+        this.beasiswaPilihan = null;
     }
 
     public int getIdMahasiswa() {
@@ -71,5 +76,44 @@ public class Mahasiswa {
 
     public void setIpk(float ipk) {
         this.ipk = ipk;
+    }
+
+    public void pilihBeasiswa(ArrayList<Beasiswa> daftarBeasiswa) throws Exception{
+        int pilihan = randomGenerator.nextInt(daftarBeasiswa.size());
+        this.beasiswaPilihan = daftarBeasiswa.get(pilihan);
+        this.statusBeasiswa = "mendaftar beasiswa";
+        System.out.println("Mahasiswa " + this.namaMahasiswa + " telah mendaftar beasiswa" + beasiswaPilihan.getBeasiswaName());
+        Thread.sleep(10);
+    }
+
+    public void isiFormulir() throws Exception{
+        System.out.println("Mahasiswa " + this.namaMahasiswa + " sedang mengisi formulir");
+        Thread.sleep(10);
+    }
+
+    public void mengumpulkanBerkas() throws Exception{
+        System.out.println("Mahasiswa " + this.namaMahasiswa + " mengumpulkan berkas");
+        this.statusBeasiswa = "mengumpulkan berkas";
+        Thread.sleep(10);
+    }
+
+    public void wawancara(ArrayList<Pewawancara> daftarPewawancara) throws Exception{
+        int pilihan = randomGenerator.nextInt(daftarPewawancara.size());
+        Pewawancara pewawancara = daftarPewawancara.get(pilihan);
+        System.out.println("Mahasiswa " + this.namaMahasiswa + " melakukan wawancara dengan " + pewawancara.getNamaPewawancara());
+        this.statusBeasiswa = "melakukan wawancara";
+        Thread.sleep(10);
+    }
+
+    public void mendapatkanHasil() throws Exception{
+        String[] yesOrNo = {"yes", "no"};
+        String hasil = yesOrNo[randomGenerator.nextInt(yesOrNo.length)];
+        if(hasil.equals("yes")) {
+            this.statusBeasiswa = "diterima " + this.beasiswaPilihan.getBeasiswaName();
+            System.out.println("Mahasiswa " + this.namaMahasiswa + " mendapatkan beasiswa " + this.beasiswaPilihan);
+        }
+        else {
+            System.out.println("Mahasiswa " + this.namaMahasiswa + " mendapatkan beasiswa " + this.beasiswaPilihan);
+        }
     }
 }
