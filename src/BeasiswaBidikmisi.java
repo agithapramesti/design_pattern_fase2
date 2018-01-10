@@ -1,3 +1,5 @@
+import decorator.InterfaceBeasiswa;
+
 public class BeasiswaBidikmisi implements InterfaceBeasiswa {
     @Override
     public void getBeasiswaName() {

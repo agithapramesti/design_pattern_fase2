@@ -1,5 +1,7 @@
-public class SetahunBeasiswaDecorator extends DecoratorBeasiswa{
-    public SetahunBeasiswaDecorator(InterfaceBeasiswa beasiswa) {
+package decorator;
+
+public class SebulanBeasiswaDecorator extends DecoratorBeasiswa{
+    public SebulanBeasiswaDecorator(InterfaceBeasiswa beasiswa) {
         super(beasiswa);
     }
 
@@ -16,6 +18,6 @@ public class SetahunBeasiswaDecorator extends DecoratorBeasiswa{
 
     //  method waktu berbeda
     private void setWaktu(){
-        System.out.println("Durasi : 1 tahun");
+        System.out.println("Durasi : 1 bulan");
     }
 }

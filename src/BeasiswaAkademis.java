@@ -1,4 +1,6 @@
-public class BeasiswaAkademis implements InterfaceBeasiswa{
+import decorator.InterfaceBeasiswa;
+
+public class BeasiswaAkademis implements InterfaceBeasiswa {
     @Override
     public void getBeasiswaName() {
     }

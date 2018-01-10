@@ -1,3 +1,5 @@
+import decorator.InterfaceBeasiswa;
+
 public class BeasiswaFactory {
     public InterfaceBeasiswa getBeasiswa(String jenisBeasiswa){
         if(jenisBeasiswa==null){

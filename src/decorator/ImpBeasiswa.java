@@ -1,3 +1,5 @@
+package decorator;
+
 public class ImpBeasiswa implements InterfaceBeasiswa{
 
     @Override

@@ -1,3 +1,5 @@
+package decorator;
+
 public abstract class DecoratorBeasiswa implements InterfaceBeasiswa {
     protected InterfaceBeasiswa beasiswa;
 

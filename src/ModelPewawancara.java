@@ -1,13 +1,15 @@
 public class ModelPewawancara {
     private int idPewawancara;
-    private String namaPewawancara, role;
+    private String namaPewawancara, role, pertanyaan;
 
-    public ModelPewawancara(){}
+    public ModelPewawancara(String nama, int id, String kondisi_finansial){}
 
-    public ModelPewawancara(int idPewawancara, String namaPewawancara, String role) {
+    public ModelPewawancara(int idPewawancara, String namaPewawancara, String role, String pertanyaan) {
+
         this.idPewawancara = idPewawancara;
         this.namaPewawancara = namaPewawancara;
         this.role = role;
+        this.pertanyaan = pertanyaan;
     }
 
     public int getIdPewawancara() {
@@ -32,5 +34,9 @@ public class ModelPewawancara {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public void menanyakanPertanyaan() {
+        System.out.println(this.namaPewawancara + " menanyakan tentang " + this.pertanyaan);
     }
 }
